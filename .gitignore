@@ -1,0 +1,17 @@
+.env
+*.pem
+config/private.json
+
+node_modules/
+/vendor
+
+.DS_Store
+Thumbs.db
+
+*.log
+npm-debug.log*
+
+dist/
+build/
+.idea/
+.vscode/
