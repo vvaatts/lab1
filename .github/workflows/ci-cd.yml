@@ -1,0 +1,36 @@
+name: CI/CD Pipeline
+
+# КРОК 1: Налаштування тригерів
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+# КРОК 2: Налаштування етапу перевірки (CI)
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest # 1. Визначення середовища виконання
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js # 2. Налаштування оточення
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies # 3. Встановлення залежностей
+        run: npm install
+
+      - name: Run linter # 4. Перевірка якості коду
+        run: npm run lint
+
+      - name: Run unit tests # 5. Запуск тестів
+        run: npm run test:unit
