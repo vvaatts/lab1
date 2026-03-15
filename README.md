@@ -1,3 +1,13 @@
+# UniDone - Task Manager
+
+[![CI/CD Pipeline](https://github.com/vvaatts/lab1/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/vvaatts/lab1/actions/workflows/ci-cd.yml)
+
+🌐 **[Подивитися мій готовий сайт на Vercel][https://vercel.com/vvaatts-projects/lab1]**
+
+---
+
+This template should help get you started developing with Vue 3 in Vite.
+## Recommended IDE Setup
 # .
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -67,3 +77,6 @@ npm run test:e2e -- --debug
 ```sh
 npm run lint
 ```
+
+
+[def]: https://vercel.com/vvaatts-projects/lab1
